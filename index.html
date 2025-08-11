@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio · Intro + Sections</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- 고정 상단 내비게이션 -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top">JongKyu's PORTFOLIO</a>
+      <ul class="nav-links">
+        <li><a href="#about"     data-nav>About me</a></li>
+        <li><a href="#skills"    data-nav>Skills</a></li>
+        <li><a href="#archiving" data-nav>Archiving</a></li>
+        <li><a href="#projects"  data-nav>Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ========= Intro ========= -->
+    <section id="intro" class="intro">
+      <div class="container intro__grid">
+        <div class="intro__text">
+          <p class="intro__eyebrow">👋 안녕하세요!</p>
+          <h1 class="intro__title">
+            <span class="accent">AI 엔지니어</span> <strong>손종규</strong>입니다.
+          </h1>
+          <p class="intro__desc">실패를 두려워하지 않고 항상 도전하는 엔지니어입니다.</p>
+          <div class="intro__actions">
+            <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
+            <a class="btn btn--ghost" href="resume.pdf" download>이력서 다운로드</a>
+            <a class="btn btn--ghost" href="resume.pdf" download>자기소개서 다운로드</a>
+          </div>
+        </div>
+        <div class="intro__visual">
+          <div class="avatar">
+            <img src="증명사진.jpg" alt="증명사진" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="container intro__down">
+        <a href="#about" class="scroll-down" aria-label="About 섹션으로 이동">더 알아보기</a>
+      </div>
+    </section>
+
+    <!-- ========= About me ========= -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>👤 About me</h2>
+        <div class="panel about-panel">
+          <div class="about-grid">
+            <div class="about-item">
+              <i class="fas fa-user"></i>
+              <div><strong>이름</strong><p>손종규</p></div>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-calendar-alt"></i>
+              <div><strong>생년월일</strong><p>96.11.28</p></div>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><strong>위치</strong><p>경기도 용인시 수지구</p></div>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-phone"></i>
+              <div><strong>연락처</strong><p>010-7751-9476</p></div>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-envelope"></i>
+              <div><strong>이메일</strong><p>human248@naver.com</p></div>
+            </div>
+            <div class="about-item">
+              <i class="fas fa-pencil-alt"></i>
+              <div><strong>학력</strong><p>성균관대학교<br>(수학과 석사 졸업)</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Skills ========= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>🛠️ Skills</h2>
+        <div class="panel">
+          <div class="skill-groups">
+            <!-- 프로그래밍/데이터 -->
+            <div class="skill-group">
+              <h3><i class="fas fa-code"></i> Programming & Data</h3>
+              <ul class="badges">
+                <li>Python</li><li>NumPy</li><li>Pandas</li><li>SQL</li>
+              </ul>
+            </div>
+            <!-- 데이터베이스 -->
+            <div class="skill-group">
+              <h3><i class="fas fa-database"></i> Databases</h3>
+              <ul class="badges">
+                <li>MySQL</li><li>MongoDB</li><li>Oracle</li>
+              </ul>
+            </div>
+            <!-- 클라우드 -->
+            <div class="skill-group">
+              <h3><i class="fas fa-cloud"></i> Cloud</h3>
+              <ul class="badges">
+                <li>AWS(EC2, EKS, VPC, S3, Lambda)</li>
+              </ul>
+            </div>
+            <!-- 컨테이너/오케스트레이션 -->
+            <div class="skill-group">
+              <h3><i class="fas fa-cubes"></i> Containers & Orchestration</h3>
+              <ul class="badges">
+                <li>Docker</li><li>Kubernetes</li><li>Harbor</li>
+              </ul>
+            </div>
+            <!-- 운영 자동화 -->
+            <div class="skill-group">
+              <h3><i class="fab fa-git-alt"></i> DevOps</h3>
+              <ul class="badges">
+                <li>GitHub Actions</li><li>GitLab CI</li><li>Argo CD</li>
+              </ul>
+            </div>
+            <!-- ML & DL -->
+            <div class="skill-group">
+              <h3><i class="fas fa-brain"></i> ML & DL</h3>
+              <ul class="badges">
+                <li>XGBoost</li><li>PyTorch</li><li>Transformers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Archiving ========= -->
+    <section id="archiving" class="section">
+      <div class="container">
+        <h2>📂 Archiving</h2>
+        <div class="panel">
+          <ul class="links-list">
+            <li>
+              <a href="https://github.com/SonJongKyu" target="_blank" rel="noreferrer">
+                <i class="fab fa-github"></i>
+                <span class="links-title">GitHub</span>
+                <span class="links-desc">프로젝트 코드 & 이슈 기록</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://blog.naver.com/human248" target="_blank" rel="noreferrer">
+                <i class="fas fa-blog"></i>
+                <span class="links-title">Blog</span>
+                <span class="links-desc">공부/트러블슈팅 정리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Projects ========= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>📦 Projects</h2>
+
+        <div class="project-list">
+          <!-- 1 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">NAT Service</span>
+              <time class="proj-date">2024.09</time>
+            </header>
+            <h3 class="proj-title">사내 네트워크 트래픽 NAT 서비스 구축</h3>
+            <ul class="proj-desc">
+              <li>사내 외부망 접속을 위한 NAT 게이트웨이 구성 및 고가용성 설정</li>
+              <li>CloudWatch로 트래픽/오류 지표 수집, 경보 설정</li>
+              <li>보안그룹/라우팅 테이블 최적화로 비용 및 지연시간 절감</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">AWS</span><span class="tag">VPC</span><span class="tag">EC2</span>
+              <span class="tag">CloudWatch</span><span class="tag">Terraform</span>
+            </div>
+            <a class="btn-readme"
+               href="#"
+               data-readme-title="NAT Service · README"
+               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
+              <i class="far fa-bookmark"></i> README
+            </a>
+          </article>
+
+          <!-- 2 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">전력사용량(DB)</span>
+              <time class="proj-date">2024.05</time>
+            </header>
+            <h3 class="proj-title">전력 사용량 수집/적재 파이프라인</h3>
+            <ul class="proj-desc">
+              <li>센서 데이터 수집 → 정제 → RDB 적재까지 일괄 파이프라인 구현</li>
+              <li>월/일 단위 집계 및 알림 규칙 정의</li>
+              <li>쿼리 튜닝으로 리포트 생성 시간 60% 단축</li>
+            </ul>
+            <div class="proj-tags">
+              <span class="tag">MySQL</span><span class="tag">Python</span>
+              <span class="tag">Pandas</span><span class="tag">Airflow</span>
+            </div>
+            <a class="btn-readme"
+               href="#"
+               data-readme-title="전력 사용량 파이프라인 · README"
+               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
+              <i class="far fa-bookmark"></i> README
+            </a>
+          </article>
+
+          <!-- 3 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">Private Registry 구축</span>
+              <time class="proj-date">2023.12</time>
+            </header>
+            <h3 class="proj-title">Harbor 기반 프라이빗 레지스트리</h3>
+            <ul class="proj-desc">
+              <li>Harbor 설치/SSO 연동 및 프로젝트/권한 체계 설계</li>
+              <li>이미지 스캔/서명 파이프라인으로 보안 강화</li>
+              <li>K8s 배포 파이프라인과 통합해 배포 시간 단축</li>
+            </ul>
+            <div class="proj-tags">
+              <span class="tag">Harbor</span><span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span>
+            </div>
+            <a class="btn-readme"
+               href="#"
+               data-readme-title="Private Registry · README"
+               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
+              <i class="far fa-bookmark"></i> README
+            </a>
+          </article>
+
+          <!-- 4 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">Docker Swarm</span>
+              <time class="proj-date">2023.07</time>
+            </header>
+            <h3 class="proj-title">Docker Swarm을 활용한 클러스터 구축</h3>
+            <ul class="proj-desc">
+              <li>멀티 노드 클러스터 구성 및 서비스 롤링 업데이트 자동화</li>
+              <li>Traefik로 라우팅/HTTPS 적용</li>
+              <li>스케일 아웃으로 피크 트래픽 대응</li>
+            </ul>
+            <div class="proj-tags">
+              <span class="tag">Docker</span><span class="tag">Swarm</span><span class="tag">Traefik</span>
+            </div>
+            <a class="btn-readme"
+               href="#"
+               data-readme-title="Docker Swarm · README"
+               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
+              <i class="far fa-bookmark"></i> README
+            </a>
+          </article>
+
+          <!-- 5 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">AWS Migration</span>
+              <time class="proj-date">2022.11</time>
+            </header>
+            <h3 class="proj-title">Architecting on AWS Migration</h3>
+            <ul class="proj-desc">
+              <li>온프레미스 워크로드를 AWS로 이전(EC2/EKS/S3)</li>
+              <li>VPC 설계 및 IAM 최소권한 원칙 적용</li>
+              <li>비용 최적화(리저브드/스팟 혼합)로 25% 절감</li>
+            </ul>
+            <div class="proj-tags">
+              <span class="tag">AWS</span><span class="tag">EKS</span>
+              <span class="tag">EC2</span><span class="tag">S3</span><span class="tag">IAM</span>
+            </div>
+            <a class="btn-readme"
+               href="#"
+               data-readme-title="AWS Migration · README"
+               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
+              <i class="far fa-bookmark"></i> README
+            </a>
+          </article>
+
+          <!-- 6 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">주류 정보 서비스</span>
+              <time class="proj-date">2021.10</time>
+            </header>
+            <h3 class="proj-title">비전문가를 위한 주류 정보 제공 서비스</h3>
+            <ul class="proj-desc">
+              <li>주류 메타데이터 수집/정제 및 검색 UX 설계</li>
+              <li>카테고리/평점 기반 추천 초기 버전 구현</li>
+              <li>CI/CD로 자동 배포 파이프라인 구성</li>
+            </ul>
+            <div class="proj-tags">
+              <span class="tag">Python</span><span class="tag">FastAPI</span>
+              <span class="tag">MySQL</span><span class="tag">GitLab CI</span>
+            </div>
+            <a class="btn-readme"
+               href="#"
+               data-readme-title="주류 정보 서비스 · README"
+               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
+              <i class="far fa-bookmark"></i> README
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> JongKyu Son. All rights reserved.</div>
+  </footer>
+
+  <!-- ===== README Modal (Markdown 컨테이너) ===== -->
+  <div id="readmeModal" class="modal hidden" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="readmeTitle">
+      <div class="modal__header">
+        <h3 id="readmeTitle">README</h3>
+        <button class="modal__close" aria-label="닫기" data-close-modal>×</button>
+      </div>
+      <div class="modal__body">
+        <div id="readmeContainer">
+          <div id="readmeLoading" class="md-loading">README 불러오는 중…</div>
+          <article id="readmeContent" class="markdown-body"></article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
