@@ -115,3 +115,85 @@ function simpleMarkdownToHtml(md) {
     }
   });
 })();
+
+/* ========= 이미지 갤러리 모달 ========= */
+(function () {
+  const modal = document.getElementById('galleryModal');
+  if (!modal) return;
+
+  const titleEl   = document.getElementById('galleryTitle');
+  const imgEl     = document.getElementById('galleryImage');
+  const counterEl = document.getElementById('galleryCounter');
+
+  const prevBtn = modal.querySelector('.gallery-nav.prev');
+  const nextBtn = modal.querySelector('.gallery-nav.next');
+
+  let images = [];
+  let idx = 0;
+
+  function update() {
+    if (!images.length) return;
+    imgEl.src = images[idx];
+    counterEl.textContent = `${idx + 1} / ${images.length}`;
+  }
+
+  function openGallery(title, imgs, startIndex = 0) {
+    images = imgs.filter(Boolean);
+    idx = Math.min(Math.max(0, startIndex), images.length - 1);
+    titleEl.textContent = title || '이미지';
+    update();
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeGallery() {
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    images = [];
+    idx = 0;
+    imgEl.src = '';
+  }
+
+  function next() {
+    if (!images.length) return;
+    idx = (idx + 1) % images.length;
+    update();
+  }
+  function prev() {
+    if (!images.length) return;
+    idx = (idx - 1 + images.length) % images.length;
+    update();
+  }
+
+  // 버튼/백드롭/ESC 제어
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target.matches('[data-close-gallery]')) closeGallery();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeGallery();
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft')  prev();
+  });
+
+  // 이미지 버튼 클릭 핸들러 (여러 장 처리)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-image');
+    if (!btn) return;
+    e.preventDefault();
+
+    const title = btn.dataset.galleryTitle || '이미지';
+    const raw = (btn.dataset.images || '').trim();
+    if (!raw) {
+      alert('이미지 경로가 설정되지 않았습니다.');
+      return;
+    }
+    const imgs = raw.split(',').map(s => s.trim()).filter(Boolean);
+    openGallery(title, imgs, 0);
+  });
+})();

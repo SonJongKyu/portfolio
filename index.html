@@ -170,149 +170,536 @@
         <h2>📦 Projects</h2>
 
         <div class="project-list">
+
           <!-- 1 -->
           <article class="project">
             <header class="project__head">
-              <span class="proj-badge">NAT Service</span>
+              <span class="proj-badge">Monitoring</span>
               <time class="proj-date">2024.09</time>
             </header>
-            <h3 class="proj-title">사내 네트워크 트래픽 NAT 서비스 구축</h3>
+            <h3 class="proj-title">Monitoring & File Server 구축</h3>
             <ul class="proj-desc">
-              <li>사내 외부망 접속을 위한 NAT 게이트웨이 구성 및 고가용성 설정</li>
-              <li>CloudWatch로 트래픽/오류 지표 수집, 경보 설정</li>
-              <li>보안그룹/라우팅 테이블 최적화로 비용 및 지연시간 절감</li>
+              <li>NFS 기반 파일 서버로 데이터 공유 및 협업 지원</li>
+              <li>Prometheus + Node Exporter로 서버 자원 모니터링</li>
+              <li>Grafana & Slack 알림으로 실시간 시각화와 장애 대응</li>
             </ul>
             <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
             <div class="proj-tags">
-              <span class="tag">AWS</span><span class="tag">VPC</span><span class="tag">EC2</span>
-              <span class="tag">CloudWatch</span><span class="tag">Terraform</span>
+              <span class="tag">Linux</span><span class="tag">NFS(File Server)</span><span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span><span class="tag">Alertmanager</span>
             </div>
-            <a class="btn-readme"
-               href="#"
-               data-readme-title="NAT Service · README"
-               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
-              <i class="far fa-bookmark"></i> README
-            </a>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Monitoring · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark" aria-hidden="true"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Monitoring · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image" aria-hidden="true"></i> 이미지
+              </a>
+            </div>
           </article>
 
           <!-- 2 -->
           <article class="project">
             <header class="project__head">
-              <span class="proj-badge">전력사용량(DB)</span>
-              <time class="proj-date">2024.05</time>
+              <span class="proj-badge">DMZ</span>
+              <time class="proj-date">2024.09</time>
             </header>
-            <h3 class="proj-title">전력 사용량 수집/적재 파이프라인</h3>
+            <h3 class="proj-title">DMZ & Firewall 구축</h3>
             <ul class="proj-desc">
-              <li>센서 데이터 수집 → 정제 → RDB 적재까지 일괄 파이프라인 구현</li>
-              <li>월/일 단위 집계 및 알림 규칙 정의</li>
-              <li>쿼리 튜닝으로 리포트 생성 시간 60% 단축</li>
+              <li>DMZ 서버를 통해 외부망과 내부망을 분리하여 보안 강화</li>
+              <li>Iptables & Firewalld로 접근 제어 및 IP 차단/허용 정책 구현</li>
+              <li>웹 서버(Apache) 테스트를 통해 방화벽 규칙 적용 및 로그 검증</li>
             </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
             <div class="proj-tags">
-              <span class="tag">MySQL</span><span class="tag">Python</span>
-              <span class="tag">Pandas</span><span class="tag">Airflow</span>
+              <span class="tag">Linux</span><span class="tag">Apache</span><span class="tag">Iptables</span>
+              <span class="tag">firewalld</span>
             </div>
-            <a class="btn-readme"
-               href="#"
-               data-readme-title="전력 사용량 파이프라인 · README"
-               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
-              <i class="far fa-bookmark"></i> README
-            </a>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="DMZ · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="DMZ · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
           </article>
 
           <!-- 3 -->
           <article class="project">
             <header class="project__head">
-              <span class="proj-badge">Private Registry 구축</span>
-              <time class="proj-date">2023.12</time>
+              <span class="proj-badge">VPN</span>
+              <time class="proj-date">2024.09</time>
             </header>
-            <h3 class="proj-title">Harbor 기반 프라이빗 레지스트리</h3>
+            <h3 class="proj-title">VPN Server 구축</h3>
             <ul class="proj-desc">
-              <li>Harbor 설치/SSO 연동 및 프로젝트/권한 체계 설계</li>
-              <li>이미지 스캔/서명 파이프라인으로 보안 강화</li>
-              <li>K8s 배포 파이프라인과 통합해 배포 시간 단축</li>
+              <li>외부에서 내부로 안전하게 접근하기 위한 암호화 통신 환경 구축</li>
+              <li>OpenVPN 서버 설치 및 암호화 프로토콜/라우팅 설정</li>
+              <li>RSA인증서 기반 접속 정책 구성</li>
             </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
             <div class="proj-tags">
-              <span class="tag">Harbor</span><span class="tag">Docker</span>
-              <span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span>
+              <span class="tag">Linux</span><span class="tag">OpenVPN</span><span class="tag">TLS/SSL</span>
+              <span class="tag">RSA</span>
             </div>
-            <a class="btn-readme"
-               href="#"
-               data-readme-title="Private Registry · README"
-               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
-              <i class="far fa-bookmark"></i> README
-            </a>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="VPN · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="VPN · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
           </article>
 
           <!-- 4 -->
           <article class="project">
             <header class="project__head">
-              <span class="proj-badge">Docker Swarm</span>
-              <time class="proj-date">2023.07</time>
+              <span class="proj-badge">NAT</span>
+              <time class="proj-date">2024.09</time>
             </header>
-            <h3 class="proj-title">Docker Swarm을 활용한 클러스터 구축</h3>
+            <h3 class="proj-title">NAT Service 구축</h3>
             <ul class="proj-desc">
-              <li>멀티 노드 클러스터 구성 및 서비스 롤링 업데이트 자동화</li>
-              <li>Traefik로 라우팅/HTTPS 적용</li>
-              <li>스케일 아웃으로 피크 트래픽 대응</li>
+              <li>사설 IP ↔ 공인 IP 변환을 통해 내부 네트워크를 외부와 연결</li>
+              <li>Static/Dynamic NAT을 활용해 다양한 IP 매핑 및 트래픽 제어 구현</li>
+              <li>NAT 규칙 적용으로 웹 서버 외부 접근 및 내부 서비스 연동 검증</li>
             </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
             <div class="proj-tags">
-              <span class="tag">Docker</span><span class="tag">Swarm</span><span class="tag">Traefik</span>
+              <span class="tag">Linux</span><span class="tag">VirtualBox</span><span class="tag">Apache</span>
+              <span class="tag">Iptables</span>
             </div>
-            <a class="btn-readme"
-               href="#"
-               data-readme-title="Docker Swarm · README"
-               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
-              <i class="far fa-bookmark"></i> README
-            </a>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="NAT · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="NAT · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
           </article>
 
           <!-- 5 -->
           <article class="project">
             <header class="project__head">
-              <span class="proj-badge">AWS Migration</span>
-              <time class="proj-date">2022.11</time>
+              <span class="proj-badge">HAProxy</span>
+              <time class="proj-date">2024.09</time>
             </header>
-            <h3 class="proj-title">Architecting on AWS Migration</h3>
+            <h3 class="proj-title">HAProxy Load Balancing Service 구축</h3>
             <ul class="proj-desc">
-              <li>온프레미스 워크로드를 AWS로 이전(EC2/EKS/S3)</li>
-              <li>VPC 설계 및 IAM 최소권한 원칙 적용</li>
-              <li>비용 최적화(리저브드/스팟 혼합)로 25% 절감</li>
+              <li>HAProxy로 L4/L7 로드밸런싱 구성</li>
+              <li>Round Robin, Least Connection 등 알고리즘으로 효율적 분산 처리</li>
+              <li>SSL/TLS 종료 & 장애 감지를 통한 보안 강화 및 무중단 서비스 제공</li>
             </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
             <div class="proj-tags">
-              <span class="tag">AWS</span><span class="tag">EKS</span>
-              <span class="tag">EC2</span><span class="tag">S3</span><span class="tag">IAM</span>
+              <span class="tag">Linux</span><span class="tag">Apache</span><span class="tag">MariaDB</span>
+              <span class="tag">HAProxy</span>
             </div>
-            <a class="btn-readme"
-               href="#"
-               data-readme-title="AWS Migration · README"
-               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
-              <i class="far fa-bookmark"></i> README
-            </a>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="HAProxy · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="HAProxy · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
           </article>
 
           <!-- 6 -->
           <article class="project">
             <header class="project__head">
-              <span class="proj-badge">주류 정보 서비스</span>
-              <time class="proj-date">2021.10</time>
+              <span class="proj-badge">DNS</span>
+              <time class="proj-date">2024.09</time>
+            </header>
+            <h3 class="proj-title">DNS & MAIL Server 구축</h3>
+            <ul class="proj-desc">
+              <li>BIND 기반 DNS 서버로 도메인 네임 해석 및 Zone 관리 구현</li>
+              <li>Sendmail + Dovecot으로 메일 송수신 환경 구성</li>
+              <li>도메인 기반 메일 서비스 및 사용자 인증·테스트</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Linux</span><span class="tag">BIND</span><span class="tag">Sendmail</span><span class="tag">Dovecot</span>
+              <span class="tag">Thunderbird</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="DNS · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="DNS · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="project">
+            <div class="proj-star"><i class="fas fa-star"></i></div>
+            <header class="project__head">
+              <span class="proj-badge">Oracle SQL</span>
+              <time class="proj-date">2024.10</time>
+            </header>
+            <h3 class="proj-title">전력 사용량 및 요금 관리 DB 시스템</h3>
+            <ul class="proj-desc">
+              <li>공공데이터 기반 전력 사용량·요금 관리 데이터베이스 설계 및 구현</li>
+              <li>정규화(1~3NF) & 물리 모델링을 통한 효율적 데이터 구조 구축</li>
+              <li>SQL 쿼리로 요금 조회, 미납 내역 확인, 지역·유형별 전력 분석</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Oracle</span><span class="tag">SQL</span><span class="tag">ERD</span><span class="tag">Data Modeling</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Oracle SQL · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Oracle SQL · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="project">
+            <div class="proj-star"><i class="fas fa-star"></i></div>
+            <header class="project__head">
+              <span class="proj-badge">Data Analysis</span>
+              <time class="proj-date">2024.10</time>
+            </header>
+            <h3 class="proj-title">Python 기반 공공데이터 분석</h3>
+            <ul class="proj-desc">
+              <li>서울시 도서관·학교·인구 데이터를 수집·정제하여 다각적 분석 수행</li>
+              <li>Python + Jupyter Notebook으로 데이터 처리 및 시각화 구현</li>
+              <li>도서관 분포, 행사·대출 현황, 인구 분석을 통한 인사이트 도출</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Python</span><span class="tag">Jupyter</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Data Analysis · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Data Analysis · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">Private Registry</span>
+              <time class="proj-date">2024.11</time>
+            </header>
+            <h3 class="proj-title">Docker Registry & Harbor & Nexus 구축</h3>
+            <ul class="proj-desc">
+              <li>사설 Docker Registry & Harbor를 구축해 이미지 버전 관리</li>
+              <li>Nexus Repository를 활용한 패키지·아티팩트 중앙 관리</li>
+              <li>이미지 저장·배포 및 접근 제어 자동화</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Harbor</span><span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Private Registry · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Private Registry · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">Docker Swarm</span>
+              <time class="proj-date">2024.11</time>
+            </header>
+            <h3 class="proj-title">Docker Swarm을 활용한 클러스터 구축</h3>
+            <ul class="proj-desc">
+              <li>Docker Swarm을 활용해 다중 노드 클러스터 환경 구성</li>
+              <li>서비스 배포 및 스케일링으로 컨테이너 가용성과 확장성 확보</li>
+              <li>로드밸런싱 & 장애 복구 기능을 통해 안정적인 서비스 운영</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Docker</span><span class="tag">Swarm</span><span class="tag">Linux</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Docker Swarm · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Docker Swarm · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">AWS Migration</span>
+              <time class="proj-date">2024.11</time>
+            </header>
+            <h3 class="proj-title">AWS Migration & Hybrid Cloud 구축</h3>
+            <ul class="proj-desc">
+              <li>A사·B사 인프라를 통합하여 하이브리드 클라우드 환경으로 전환</li>
+              <li>7R 전략 기반 단계적 마이그레이션으로 안정성과 비용 최적화</li>
+              <li>Landing Zone 설계 & 보안·운영 최적화</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">AWS</span><span class="tag">VPC</span>
+              <span class="tag">EC2</span><span class="tag">S3</span><span class="tag">IAM</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="AWS Migration · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="AWS Migration · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="project">
+            <div class="proj-star"><i class="fas fa-star"></i></div>
+            <header class="project__head">
+              <span class="proj-badge">Kubernetes</span>
+              <time class="proj-date">2024.11</time>
+            </header>
+            <h3 class="proj-title">Kubernetes 기반 클라우드 네이티브 아키텍처 구축</h3>
+            <ul class="proj-desc">
+              <li>Namespace 기반 Kubernetes 클러스터 설계 및 서비스 분리 운영</li>
+              <li>FE(Next.js) – BE(Spring) – DB(MongoDB, PostgreSQL) 풀스택 구축</li>
+              <li>Prometheus, Grafana, OpenTelemetry로 모니터링·알림 체계 구현</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Kubernetes</span><span class="tag">MetalLB</span><span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span><span class="tag">OpenTelemetry</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Kubernetes · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Kubernetes · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 13 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">CI/CD</span>
+              <time class="proj-date">2024.11</time>
+            </header>
+            <h3 class="proj-title">GitLab 기반 CI/CD 파이프라인 구축</h3>
+            <ul class="proj-desc">
+              <li>GitLab CI/CD를 활용해 코드 빌드·테스트·배포 프로세스 자동화</li>
+              <li>Pipeline & Runner를 통해 코드 품질 검증과 배포 안정성 강화</li>
+              <li>이슈 관리·커밋 추적·분석 대시보드로 개발 효율성 극대화</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">GitLab</span><span class="tag">GitRunner</span><span class="tag">Git Repository</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="CI/CD · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="CI/CD · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 14 -->
+          <article class="project">
+            <div class="proj-star"><i class="fas fa-star"></i></div>
+            <header class="project__head">
+              <span class="proj-badge">AWS + K8S</span>
+              <time class="proj-date">2024.12</time>
             </header>
             <h3 class="proj-title">비전문가를 위한 주류 정보 제공 서비스</h3>
             <ul class="proj-desc">
-              <li>주류 메타데이터 수집/정제 및 검색 UX 설계</li>
-              <li>카테고리/평점 기반 추천 초기 버전 구현</li>
-              <li>CI/CD로 자동 배포 파이프라인 구성</li>
+              <li>주류 정보 제공 서비스를 위한 MSA 아키텍처 설계 및 구현</li>
+              <li>Amazon Bedrock을 활용한 검색증강생성(RAG) 챗봇 구축</li>
+              <li>AWS 환경에서 확장성과 안정성을 갖춘 Kubernetes 클러스터 운영</li>
             </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
             <div class="proj-tags">
-              <span class="tag">Python</span><span class="tag">FastAPI</span>
-              <span class="tag">MySQL</span><span class="tag">GitLab CI</span>
+              <span class="tag">AWS</span><span class="tag">Kubernetes</span>
+              <span class="tag">Docker</span><span class="tag">Redis</span><span class="tag">MongoDB</span>
             </div>
-            <a class="btn-readme"
-               href="#"
-               data-readme-title="주류 정보 서비스 · README"
-               data-readme-url="https://raw.githubusercontent.com/SonJongKyu/Mainstream_Information_Service/refs/heads/main/README.md">
-              <i class="far fa-bookmark"></i> README
-            </a>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="AWS + K8S · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="AWS + K8S · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
           </article>
+
+          <!-- 15 -->
+          <article class="project">
+            <div class="proj-star"><i class="fas fa-star"></i></div>
+            <header class="project__head">
+              <span class="proj-badge">Master’s Thesis</span>
+              <time class="proj-date">2025.08</time>
+            </header>
+            <h3 class="proj-title">뉴스 제목 기반 주식 예측 모델</h3>
+            <ul class="proj-desc">
+              <li>뉴스 데이터와 주가 지표를 결합해 주가 등락 예측 모델 구축</li>
+              <li>SVM 기반 분류 모델로 뉴스 제목과 주가 변동 간 상관관계를 분석</li>
+              <li>SMOTE로 불균형 데이터 문제를 개선</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">Python</span><span class="tag">KoFinBERT</span>
+              <span class="tag">TF-IDF</span><span class="tag">SVM</span><span class="tag">SMOTE</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Master’s Thesis · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Master’s Thesis · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
+          <!-- 16 -->
+          <article class="project">
+            <header class="project__head">
+              <span class="proj-badge">Website</span>
+              <time class="proj-date">2025.08</time>
+            </header>
+            <h3 class="proj-title">포트폴리오 웹 페이지 구축</h3>
+            <ul class="proj-desc">
+              <li>개인 프로젝트 및 이력 관리를 위한 포트폴리오 웹 페이지 제작</li>
+              <li>반응형 UI/UX와 직관적인 네비게이션을 통해 시각적으로 표현</li>
+              <li>JSON 기반 환경 설정을 적용하여 확장성과 유지보수성 강화</li>
+            </ul>
+            <a class="proj-link" href="#"><i class="fas fa-link"></i> 관련 문서/데모 링크</a>
+            <div class="proj-tags">
+              <span class="tag">HTML5</span><span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span><span class="tag">JSON</span>
+            </div>
+            <div class="proj-actions">
+              <a class="btn-readme btn"
+                 href="#"
+                 data-readme-title="Website · README"
+                 data-readme-url="https://raw.githubusercontent.com/SonJongKyu/monitoring-file-server/refs/heads/main/README.md">
+                <i class="far fa-bookmark"></i> README
+              </a>
+              <a class="btn-image btn"
+                 href="#"
+                 data-gallery-title="Website · 이미지"
+                 data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg">
+                <i class="far fa-image"></i> 이미지
+              </a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -322,7 +709,7 @@
     <div class="container">© <span id="year"></span> JongKyu Son. All rights reserved.</div>
   </footer>
 
-  <!-- ===== README Modal (Markdown 컨테이너) ===== -->
+  <!-- ===== README Modal ===== -->
   <div id="readmeModal" class="modal hidden" aria-hidden="true">
     <div class="modal__backdrop" data-close-modal></div>
     <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="readmeTitle">
@@ -336,6 +723,23 @@
           <article id="readmeContent" class="markdown-body"></article>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== 이미지 갤러리 Modal ===== -->
+  <div id="galleryModal" class="modal hidden" aria-hidden="true">
+    <div class="modal__backdrop" data-close-gallery></div>
+    <div class="modal__dialog gallery-dialog" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+      <div class="modal__header">
+        <h3 id="galleryTitle">이미지</h3>
+        <button class="modal__close" aria-label="닫기" data-close-gallery>×</button>
+      </div>
+      <div class="gallery-body">
+        <button class="gallery-nav prev" type="button" aria-label="이전 이미지"><i class="fas fa-chevron-left"></i></button>
+        <img id="galleryImage" src="" alt="프로젝트 이미지" />
+        <button class="gallery-nav next" type="button" aria-label="다음 이미지"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="gallery-counter" id="galleryCounter">1 / 1</div>
     </div>
   </div>
 
