@@ -160,7 +160,7 @@ body{
 
 /* 카드가 별의 기준(컨테이닝 블록)이 되도록 */
 .project{
-  position: relative;              /* ⬅️ 이 줄이 핵심! */
+  position: relative;
   background:#fff;
   border:1px solid var(--border);
   border-radius:16px;
@@ -177,7 +177,7 @@ body{
   color:gold;
   text-shadow:0 0 4px rgba(0,0,0,.4);
   animation:shine 2s infinite ease-in-out;
-  z-index: 2; /* 배지/텍스트보다 위에 오도록(필요시) */
+  z-index: 2;
 }
 @keyframes shine{
   0%   { transform:scale(1);   opacity:1; }
@@ -189,7 +189,7 @@ body{
 /* 버튼 묶음(이미지 + README) — 가운데 정렬 */
 .proj-actions{
   display:flex;
-  justify-content:center;   /* ⬅⬅ 가운데 정렬 핵심 */
+  justify-content:center;
   gap:.6rem;
   flex-wrap:wrap;
   margin-top:.5rem;
@@ -298,3 +298,4 @@ body{
 
 /* ===== 푸터 ===== */
 .site-footer{ margin-top:40px; border-top:1px solid var(--border); color:#334155; padding:20px 0 40px; text-align:center; }
+
